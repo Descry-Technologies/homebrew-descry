@@ -25,7 +25,8 @@ jobs:
           gh release download "v${{ github.event.inputs.version }}" \
             --repo Descry-Technologies/descry \
             --pattern "descry.rb" \
-            --output Formula/descry.rb
+            --output Formula/descry.rb \
+            --clobber
 
       - name: Commit and push
         run: |
